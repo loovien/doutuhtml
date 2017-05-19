@@ -3,13 +3,14 @@
  */
 
 import React, {Component} from 'react';
+import './layouts.css';
 
 export default class Header extends Component {
     render() {
         return (
-            <header>
-                <h2>斗图</h2>
-                <ul>
+            <header className="nav-header">
+                <h3 className="nav-header-title">斗图</h3>
+                <ul className="nav-menu u-pull-right">
                     <li>
                         <a href="#">浏览</a>
                         <a href="#">协议</a>
