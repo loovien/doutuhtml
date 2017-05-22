@@ -2,7 +2,6 @@
  * Created by luowen on 2017/5/20.
  */
 import React, {Component} from 'react';
-import $ from "jquery";
 
 export default class Header extends Component {
     render () {
