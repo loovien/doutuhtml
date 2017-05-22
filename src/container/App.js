@@ -10,34 +10,24 @@ import '../assets/css/magnific-popup.css';
 import '../assets/css/salvattore.css';
 import '../assets/css/style.css';
 
-import $ from 'jquery';
-import 'modernizr';
-import 'respond';
-import jQueryEasing from 'jquery.easing';
-// import 'waypoints';
-import 'magnific-popup';
-import 'salvattore';
-//
-$.fn.easing = jQueryEasing;
-
-// import '../assets/js/jquery.min';
-// import '../assets/js/modernizr-2.6.2.min.js';
-// import '../assets/js/respond.min.js';
-// import '../assets/js/jquery.easing.1.3.js';
-// import '../assets/js/bootstrap.min.js';
-// import '../assets/js/jquery.waypoints.min.js';
-// import '../assets/js/jquery.magnific-popup.min';
-// import '../assets/js/salvattore.min';
-// import '../assets/js/main';
-
+import $ from "jquery";
 
 export default class App extends Component {
+    constructor(props) {
+        super(props);
+        this.menu = null;
+        this.showMenu = this.showMenu.bind(this);
+    }
+    showMenu(evt) {
+        evt.preventDefault();
+        let E_menu = $(this.menu);
+        E_menu.toggleClass("fh5co-awake");
+    }
     render() {
-        console.log($);
         return (
             <div>
-                <Menu/>
-                <Header/>
+                <Menu menu={el => this.menu = el} showMenu={this.showMenu}/>
+                <Header showMenu={this.showMenu}/>
                 <Main/>
                 <Footer/>
             </div>

@@ -4,14 +4,51 @@
 
 import React, {Component} from 'react';
 
-export default class Main extends Component {
+import $ from 'jquery';
+import 'jquery.easing';
+import 'magnific-popup';
+import 'salvattore';
 
+
+export default class Main extends Component {
+    componentDidMount() {
+        let E_imgBox = $(this.refs.fh5coBoard);
+        let E_imgPopUp = $(".image-popup", E_imgBox);
+        E_imgPopUp.magnificPopup({
+            type: 'image',
+            removalDelay: 300,
+            mainClass: 'mfp-with-zoom',
+            titleSrc: 'title',
+            gallery:{
+                enabled:true
+            },
+            zoom: {
+                enabled: true, // By default it's false, so don't forget to enable it
+
+                duration: 300, // duration of the effect, in milliseconds
+                easing: 'ease-in-out', // CSS transition easing function
+
+                // The "opener" function should return the element from which popup will be zoomed in
+                // and to which popup will be scaled down
+                // By defailt it looks for an image tag:
+                opener: function(openerElement) {
+                    // openerElement is the element on which popup was initialized, in this case its <a> tag
+                    // you don't need to add "opener" option if this code matches your needs, it's defailt one.
+                    return openerElement.is('img') ? openerElement : openerElement.find('img');
+                }
+            }
+        });
+
+    }
+
+    componentWillUnmount() {
+    }
     render() {
         return (
             <div id="fh5co-main">
                 <div className="container">
                     <div className="row">
-                        <div id="fh5co-board" data-columns>
+                        <div ref="fh5coBoard" data-columns>
                             <div className="item">
                                 <div className="animate-box">
                                     <a href="images/img_1.jpg" className="image-popup fh5co-board-img" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?"><img src="images/img_1.jpg" alt="Free HTML5 Bootstrap template" /></a>
