@@ -7682,6 +7682,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #fh5co-board .item {
+  max-width: 20rem;
+  min-width: 40rem;
   margin: 10px 10px 20px 10px;
   background: #fff;
   -webkit-border-radius: 4px;

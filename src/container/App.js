@@ -8,6 +8,7 @@ import '../assets/css/animate.css';
 import '../assets/css/icomoon.css';
 import '../assets/css/magnific-popup.css';
 import '../assets/css/style.css';
+import '../assets/css/app.css';
 
 import $ from "jquery";
 

@@ -10,7 +10,7 @@ import 'magnific-popup';
 import 'jquery.easing';
 
 export default class ImgBox extends Component {
-    componentDidMount() {
+    componentDidMountooo() {
         let E_imgPopUp = $(this.refs.imgBoxItem);
         E_imgPopUp.magnificPopup({
             type: 'image',
@@ -45,7 +45,7 @@ export default class ImgBox extends Component {
         console.log(props);
         return (
             <div className="item" ref="imgBoxItem">
-                <div className="animate-box">
+                <div>
                     <a href={props.item.url} className="image-popup fh5co-board-img" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?"><img src={props.item.url} alt="Free HTML5 Bootstrap template" /></a>
                 </div>
                 <div className="fh5co-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, eos?</div>

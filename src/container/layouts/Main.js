@@ -33,8 +33,8 @@ export default class Main extends Component {
         return (
             <div id="fh5co-main">
                 <div className="container">
-                    <div className="row">
-                        <Masonry id="fh5co-board">
+                    <div className="row" id="fh5co-board">
+                        <Masonry>
                             {this.imgBox.map((item) => {
                                 return <ImgBox item={item} key={item.key} />
                             })}
