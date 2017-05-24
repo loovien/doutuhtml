@@ -7,7 +7,6 @@ import Footer from './layouts/Footer';
 import '../assets/css/animate.css';
 import '../assets/css/icomoon.css';
 import '../assets/css/magnific-popup.css';
-import '../assets/css/salvattore.css';
 import '../assets/css/style.css';
 
 import $ from "jquery";
